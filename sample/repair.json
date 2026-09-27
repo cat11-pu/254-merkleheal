@@ -1,0 +1,20 @@
+{
+  "stale_error_code": "E_STALE_VERSION",
+  "dirty_error_code": "E_NOT_DIRTY",
+  "event_error_code": "E_BAD_EVENT",
+  "budget": 1,
+  "state": { "left": {}, "right": {}, "dirty": [], "healed": [], "applied": [] },
+  "events": [
+    { "id": 1, "kind": "put", "side": "L", "key": "1-a", "version": 1 },
+    { "id": 2, "kind": "put", "side": "R", "key": "1-a", "version": 2 },
+    { "id": 3, "kind": "heal", "bucket": 1 },
+    { "id": 4, "kind": "put", "side": "L", "key": "2-a", "version": 1 },
+    { "id": 5, "kind": "put", "side": "L", "key": "3-a", "version": 1 },
+    { "id": 6, "kind": "put", "side": "R", "key": "3-b", "version": 5 },
+    { "id": 7, "kind": "heal", "bucket": 3 },
+    { "id": 8, "kind": "put", "side": "R", "key": "2-a", "version": 1 },
+    { "id": 9, "kind": "put", "side": "R", "key": "1-b", "version": 1 },
+    { "id": 10, "kind": "put", "side": "L", "key": "3-c", "version": 1 },
+    { "id": 11, "kind": "put", "side": "R", "key": "3-c", "version": 1 }
+  ]
+}
